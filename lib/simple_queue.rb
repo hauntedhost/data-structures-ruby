@@ -12,6 +12,18 @@ class SimpleQueue
     end
   end
 
+  def enq(item)
+    transaction do |queue|
+      queue.unshift item
+    end
+  end
+
+  def deq
+    transaction do |queue|
+      queue.pop
+    end
+  end
+
   def count
     queue.count
   end
