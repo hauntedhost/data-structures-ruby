@@ -94,7 +94,7 @@ class BinaryTreeNode
   private
 
   def validate_node!(node)
-    raise "ArgumentError", "Argument is not a BinaryTreeNode" unless valid_node?(node)
+    raise ArgumentError, "Argument is not a BinaryTreeNode" unless valid_node?(node)
   end
 end
 
