@@ -30,7 +30,7 @@ class BinaryTreeNode
   end
 
   def dfs(target_value)
-    if ENV['DEBUG'] = 'true'
+    if ENV['DEBUG'] == 'true'
       return self.dfs_verbose(target_value)
     end
 
@@ -39,7 +39,7 @@ class BinaryTreeNode
   end
 
   def bfs(target_value)
-    if ENV['DEBUG'] = 'true'
+    if ENV['DEBUG'] == 'true'
       return self.bfs_verbose(target_value)
     end
 
@@ -99,6 +99,8 @@ class BinaryTreeNode
 end
 
 if __FILE__ == $0
+  ENV['DEBUG'] = 'true'
+
   root = BinaryTreeNode.new(0)
   one = BinaryTreeNode.new(1)
   two = BinaryTreeNode.new(2)
