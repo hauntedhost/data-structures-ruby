@@ -23,13 +23,13 @@ if __FILE__ == $0
   four.left = five
   four.right = six
 
-  puts "depth-first search:"
+  puts 'depth-first search:'
   result = root.dfs(5)
   p result
 
   puts
 
-  puts "breadth-first search:"
+  puts 'breadth-first search:'
   result = root.bfs(5)
   p result
 end

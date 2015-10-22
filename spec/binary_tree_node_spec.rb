@@ -12,17 +12,17 @@ describe BinaryTreeNode do
 
   describe 'child node assignment' do
 
-    it "#left assigns a node" do
+    it '#left assigns a node' do
       root.left = one
       expect(root.left).to eq(one)
     end
 
-    it "#right assigns a node" do
+    it '#right assigns a node' do
       root.right = two
       expect(root.right).to eq(two)
     end
 
-    it "raises an error if a non-node is assigned" do
+    it 'raises an error if a non-node is assigned' do
       expect { root.left = 3 }.to raise_error(ArgumentError)
       expect { root.right = 7 }.to raise_error(ArgumentError)
     end
