@@ -59,15 +59,15 @@ class BinaryTreeNode
     puts "at #{self.value}"
 
     if self.value == target_value
-      puts "match found"
+      puts 'match found'
       return self
     else
       if left
-        puts "headed left"
+        puts 'headed left'
       elsif right
-        puts "headed right"
+        puts 'headed right'
       else
-        puts "dead end"
+        puts 'dead end'
       end
 
       match = left.dfs_verbose(target_value) if left
@@ -82,7 +82,7 @@ class BinaryTreeNode
       current_node = nodes.shift
       puts "at #{current_node.value}"
       if current_node.value == target_value
-        puts "match found"
+        puts 'match found'
         return current_node
       end
       nodes << current_node.left if current_node.left
@@ -94,6 +94,8 @@ class BinaryTreeNode
   private
 
   def validate_node!(node)
-    raise ArgumentError, "Argument is not a BinaryTreeNode" unless valid_node?(node)
+    unless valid_node?(node)
+      raise ArgumentError, 'Argument is not a BinaryTreeNode'
+    end
   end
 end
